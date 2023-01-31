@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+  font-family: "krub", sans-serif;
+  background-color: #212025;
+}

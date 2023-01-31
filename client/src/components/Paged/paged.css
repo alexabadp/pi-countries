@@ -1,0 +1,42 @@
+.paged__contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: white;
+}
+
+.paged__contenedor button {
+  background-color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.paged__contenedor button[disabled] {
+  background-color: white;
+  cursor: no-drop;
+}
+
+.paged__contenedor input {
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  border: 1px solid #242424;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.paged__contenedor input[type="number"]::-webkit-inner-spin-button,
+.paged__contenedor input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */

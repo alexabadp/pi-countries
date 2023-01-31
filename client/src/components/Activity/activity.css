@@ -1,0 +1,18 @@
+.activity {
+}
+
+.activity__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  font-size: 20px;
+}
+
+.activity__grid p {
+  text-align: end;
+  font-size: 20px;
+}
+
+.activity__grid h3 {
+  text-align: start;
+}

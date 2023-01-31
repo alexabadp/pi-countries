@@ -1,0 +1,41 @@
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-bg {
+  background-color: #0097a7;
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.search {
+  text-align: center;
+  padding: 15px;
+}
+
+.navegacion-principal a:hover {
+  background-color: #ffc107;
+  color: #212121;
+}

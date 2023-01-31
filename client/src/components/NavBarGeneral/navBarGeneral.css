@@ -1,0 +1,27 @@
+.navegacion-principalG {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principalG {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.navegacion-principalG a {
+  display: block;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+.navegacion-principalG a:hover {
+  background-color: #ffc107;
+  color: #212121;
+}

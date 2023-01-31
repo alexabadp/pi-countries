@@ -1,0 +1,13 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  text-align: center;
+
+  gap: 20px;
+  padding: 20px;
+}
+
+.cardsContainer-link {
+  margin: 0 auto;
+  text-align: center;
+}

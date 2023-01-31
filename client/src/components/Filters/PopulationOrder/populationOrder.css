@@ -1,0 +1,17 @@
+.population-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.population-select {
+  font-size: 20px;
+  width: 200px;
+}
+.population-contenedor label {
+  color: whitesmoke;
+  padding-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
