@@ -12,7 +12,7 @@ export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 
 export const getCountries = () => {
   return async function (dispatch) {
-    const dbData = await axios.get("http://localhost:3001/countries");
+    const dbData = await axios.get("/countries");
     const countries = dbData.data;
     dispatch({
       type: GET_COUNTRIES,
@@ -24,9 +24,7 @@ export const getCountries = () => {
 export const getCountriesByName = (payload) => {
   return async function (dispatch) {
     try {
-      const dbData = await axios.get(
-        `http://localhost:3001/countries?name=${payload}`
-      );
+      const dbData = await axios.get(`/countries?name=${payload}`);
       const countries = dbData.data;
       dispatch({
         type: GET_COUNTRIES_BY_NAME,
@@ -47,7 +45,7 @@ export const getCountriesByContinent = (payload) => {
 
 export const getActivities = () => {
   return async function (dispatch) {
-    const dbData = await axios.get("http://localhost:3001/activities");
+    const dbData = await axios.get("/activities");
     const activities = dbData.data;
     dispatch({
       type: GET_ACTIVITIES,
@@ -79,7 +77,7 @@ export const getCountriesByPopulation = (payload) => {
 
 export const getCountryById = (id) => {
   return async function (dispatch) {
-    const apiData = await axios.get(`http://localhost:3001/countries/${id}`);
+    const apiData = await axios.get(`/countries/${id}`);
     const country = apiData.data;
     dispatch({
       type: GET_COUNTRY_BY_ID,
