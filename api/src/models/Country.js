@@ -13,19 +13,19 @@ module.exports = (sequelize) => {
       },
       name: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
       },
       image: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
       },
       continent: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
       },
       capital: {
         type: DataTypes.STRING,
-        // allowNull: false,
+        allowNull: false,
       },
       subregion: {
         type: DataTypes.STRING,

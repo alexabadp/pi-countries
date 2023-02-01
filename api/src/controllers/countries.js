@@ -35,7 +35,7 @@ const getCountryDb = async (req, res) => {
         });
         return res.status(200).send(country);
       }
-      return res.status(400).json("Country Not Found");
+      return res.status(404).send("Country Not Found B");
     } else {
       const countryAll = await Country.findAll({
         include: {
@@ -77,25 +77,11 @@ const getCountryDbById = async (req, res) => {
       },
     });
 
-    // let arrayCountry = [];
-    // arrayCountry.push(count);
-
-    // let country = arrayCountry.map((e) => {
-    //   return {
-    //     id: e.id,
-    //     name: e.name,
-    //     image: e.image,
-    //     continent: e.continent,
-    //     capital: e.capital,
-    //     subregion: e.subregion,
-    //     area: e.area,
-    //     population: e.population,
-    //     activities: e.activities,
-    //   };
-    // });
-
-    return res.status(200).send(count);
-    // return res.send(count);
+    if (count === null) {
+      return res.status(404).json("Country Not Found");
+    } else {
+      return res.status(200).send(count);
+    }
   } catch (error) {
     res.send(error.message);
   }

@@ -21,7 +21,7 @@ const SearchBar = () => {
       dispatch(getCountriesByName(input));
       setInput("");
     } catch (error) {
-      alert(error.message);
+      alert(error);
       setInput("");
     }
   };

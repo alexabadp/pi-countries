@@ -2,6 +2,7 @@ import React from "react";
 import Select from "react-select";
 import { useDispatch } from "react-redux";
 import {
+  getCountries,
   getCountriesByContinent,
   setCurrentPage,
 } from "../../../redux/actions";

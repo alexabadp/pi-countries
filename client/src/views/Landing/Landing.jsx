@@ -20,16 +20,14 @@ const Landing = () => {
           </div>
           <h2>DESTINOS</h2>
           <p>
-            Ven y conoce los mejores lugares del mundo para ralizar tus
-            pasatiempos favoritos
+            Come and discover the best places in the world to do your favorite
+            hobbies
           </p>
           <hr />
           <div className="footer__card">
-            <button className="button">
-              <Link className="link" to="/home" id="click">
-                BIENVENIDO
-              </Link>
-            </button>
+            <Link to="/home" id="click" className="link">
+              <button className="button">Welcome</button>
+            </Link>
           </div>
         </div>
       </div>

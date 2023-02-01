@@ -33,7 +33,7 @@ export const getCountriesByName = (payload) => {
         payload: countries,
       });
     } catch (error) {
-      return alert("Country Not Found");
+      return alert("Recipe Not Found");
     }
   };
 };
