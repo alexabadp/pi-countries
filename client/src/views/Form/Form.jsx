@@ -83,7 +83,10 @@ const Form = () => {
     if (Object.values(errors).length > 0) {
       alert("Please complete the information required");
     } else {
-      axios.post("/activity", form);
+      axios.post(
+        "https://pi-countries-production-8de2.up.railway.app/activity",
+        form
+      );
       history.push("/home");
     }
   };
