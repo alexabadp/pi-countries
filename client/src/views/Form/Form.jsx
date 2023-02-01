@@ -84,7 +84,8 @@ const Form = () => {
       alert("Please complete the information required");
     } else {
       axios
-        .post("http://localhost:3001/activity", form)
+        // .post("http://localhost:3001/activity", form)
+        .post("/activity", form)
         .then((res) => alert("Activity created"))
         .catch((err) => alert(err));
       history.push("/home");
