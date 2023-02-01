@@ -85,7 +85,10 @@ const Form = () => {
     } else {
       axios
         // .post("http://localhost:3001/activity", form)
-        .post("/activity", form)
+        .post(
+          "https://pi-countries-production-8de2.up.railway.app//activity",
+          form
+        )
         .then((res) => alert("Activity created"))
         .catch((err) => alert(err));
       history.push("/home");
