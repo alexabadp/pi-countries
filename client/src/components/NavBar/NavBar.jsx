@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { getCountries } from "../../redux/actions";
+import { getCountries, setCountryEmpty } from "../../redux/actions";
 import SearchBar from "./SearchBar/SearchBar";
 import "./navBar.css";
 
@@ -9,6 +9,7 @@ const NavBar = () => {
 
   const handleClick = () => {
     dispatch(getCountries());
+    dispatch(setCountryEmpty({}));
   };
 
   return (

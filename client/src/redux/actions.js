@@ -9,6 +9,7 @@ export const GET_COUNTRIES_BY_ALPHABET = "GET_COUNTRIES_BY_ALPHABET";
 export const GET_COUNTRIES_BY_POPULATION = "GET_COUNTRIES_BY_POPULATION";
 export const GET_COUNTRY_BY_ID = "GET_COUNTRY";
 export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+export const SET_COUNTRY_EMPTY = "SET_COUNTRY_EMPTY";
 
 export const getCountries = () => {
   return async function (dispatch) {
@@ -89,6 +90,13 @@ export const getCountryById = (id) => {
 export const setCurrentPage = (payload) => {
   return {
     type: SET_CURRENT_PAGE,
+    payload,
+  };
+};
+
+export const setCountryEmpty = (payload) => {
+  return {
+    type: SET_COUNTRY_EMPTY,
     payload,
   };
 };

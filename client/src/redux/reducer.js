@@ -8,6 +8,7 @@ import {
   GET_COUNTRIES_BY_POPULATION,
   GET_COUNTRY_BY_ID,
   SET_CURRENT_PAGE,
+  SET_COUNTRY_EMPTY,
 } from "./actions";
 
 const initialState = {
@@ -105,6 +106,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         currentPage: action.payload,
+      };
+
+    case SET_COUNTRY_EMPTY:
+      return {
+        ...state,
+        country: action.payload,
       };
 
     default:

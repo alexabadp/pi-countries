@@ -104,7 +104,7 @@ const Form = () => {
   const handleSubimit = (event) => {
     event.preventDefault();
 
-    let find = activities.slice().filter((e) => e === form.name);
+    let find = activities.slice().filter((e) => e.name === form.name);
 
     if (Object.values(errors).length > 0) {
       alert("Please complete the information required");
