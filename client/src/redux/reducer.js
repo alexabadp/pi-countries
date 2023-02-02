@@ -111,7 +111,7 @@ const rootReducer = (state = initialState, action) => {
     case SET_COUNTRY_EMPTY:
       return {
         ...state,
-        country: action.payload,
+        country: {},
       };
 
     default:
