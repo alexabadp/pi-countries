@@ -25,6 +25,7 @@ function validate(form) {
 const Form = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries);
+  const activities = useSelector((state) => state.activities);
   const history = useHistory();
   const [errors, setErrors] = useState({});
 
@@ -77,20 +78,6 @@ const Form = () => {
     });
   };
 
-  const handleSubimit = (event) => {
-    event.preventDefault();
-
-    if (Object.values(errors).length > 0) {
-      alert("Please complete the information required");
-    } else {
-      axios.post(
-        "https://pi-countries-production-8de2.up.railway.app/activity",
-        form
-      );
-      history.push("/home");
-    }
-  };
-
   const optionsSeason = [
     { value: "summer", label: "Summer" },
     {
@@ -113,6 +100,25 @@ const Form = () => {
       label: e.name,
     };
   });
+
+  const handleSubimit = (event) => {
+    event.preventDefault();
+
+    let find = activities.slice().filter((e) => e === form.name);
+
+    if (Object.values(errors).length > 0) {
+      alert("Please complete the information required");
+    } else if (find?.length > 0) {
+      alert("the activity already exists, please enter a different activity");
+    } else {
+      axios.post(
+        "https://pi-countries-production-8de2.up.railway.app/activity",
+        form
+      );
+      alert("Activity created successfully");
+      history.push("/home");
+    }
+  };
 
   return (
     <div>
