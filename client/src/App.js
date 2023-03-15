@@ -3,7 +3,8 @@ import { Landing, Home, Form, Detail } from "./views";
 import "./app.css";
 
 import axios from "axios";
-axios.defaults.baseURL = "https://pi-countries-production-8de2.up.railway.app/";
+// axios.defaults.baseURL = "https://pi-countries-production-8de2.up.railway.app/";
+axios.defaults.baseURL = "https://pi-countries-production-93f4.up.railway.app/";
 
 function App() {
   return (
