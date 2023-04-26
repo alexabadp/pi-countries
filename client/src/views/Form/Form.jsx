@@ -112,7 +112,7 @@ const Form = () => {
       alert("the activity already exists, please enter a different activity");
     } else {
       axios.post(
-        "https://pi-countries-production-8ead.up.railway.app/activity",
+        "https://pi-countries-production-0ba4.up.railway.app/activity",
         form
       );
       alert("Activity created successfully");
